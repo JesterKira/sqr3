@@ -1,0 +1,153 @@
+.Intro {
+}
+.intro__inner {
+}
+.intro-inner__content {
+  background: url(../../../../assets/intro-background.png);
+  background-size: cover;
+  display: flex;
+  height: 47.625rem;
+  max-height: 100vh;
+}
+.intro-content__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  background-color: hsla(0, 0%, 0%, 0.15);
+  backdrop-filter: var(--intro-blur-item-filter);
+  padding: 0 14rem 0 3.5rem;
+}
+.intro-content-link {
+  fill: var(--text-color-intro-elements);
+
+  &:hover {
+    fill: hsla(0, 0%, 0%, 0.3);
+  }
+}
+.intro-content__main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.intro-main__item {
+  text-align: center;
+  width: inherit;
+  background-color: hsl(0, 0%, 81%, 0.06);
+  backdrop-filter: var(--intro-blur-item-filter);
+  padding: 2.625rem 0;
+}
+.intro-main-item__component {
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+.intro-main-item__title {
+  font-family: "Revalia", sans-serif;
+  font-size: 2.25rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.intro-main-item__subtitle {
+  max-width: 412px;
+  margin: 0 auto;
+  font-size: var(--font-size-default-intro);
+  color: var(--text-color-intro-elements);
+}
+.intro-main-item__button {
+}
+.intro-inner__info {
+  margin-top: 3rem;
+}
+.intro-info__items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 5rem;
+  padding: 0 0.625rem;
+}
+.intro-info__item {
+  text-align: center;
+}
+.intro-info-item__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.55rem;
+}
+.intro-info-item__subtitle {
+  font-size: var(--font-size-default-intro);
+  & p {
+    display: flex;
+    align-items: center;
+  }
+  & img {
+    max-width: var(--font-size-default-intro);
+    margin: 0 0.625rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-content__links {
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-content__links {
+    padding-right: 6rem;
+  }
+  .intro-content-link svg {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+  .intro-main-item__title {
+    font-size: 2rem;
+  }
+  .intro-info-item__title {
+    font-size: 2.125rem;
+    margin-bottom: 1rem;
+  }
+  .intro-main-item__component:not(:last-child) {
+    margin-bottom: 2.125rem;
+  }
+  .intro-info__items {
+    gap: 3.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro-content__links {
+    padding: 0 2rem;
+  }
+  .intro-info__items {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .intro-inner__content {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  .intro-main__item {
+    padding: 0.5rem;
+  }
+  .intro-inner__info {
+    margin-top: 1rem;
+  }
+  .intro-content__links {
+    flex-direction: row;
+    padding: 2rem 0;
+  }
+  .intro-info-item__title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .intro-info-item__subtitle {
+    font-size: 0.5rem;
+    & img {
+      max-width: 0.5rem;
+    }
+  }
+}
